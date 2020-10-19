@@ -1,4 +1,6 @@
-animals = 10
-chicken = 6
-rosters = animals-chicken
-print("There are " , rosters , "rosters")
+x = 1
+y = 4
+z = 0.25
+a = (2*x+y)**2*(z**0.5)
+b = (x**0.5 + y**0.5)
+print(a/b)
