@@ -1,3 +1,4 @@
-celcius_degree = int(input())
-fahrenheit_degree = (celcius_degree * 1.8 + 32)
-print("fahrenheit degree is ", fahrenheit_degree)
+a = int(input("Enter one side :"))
+b = int(input("Enter the other side :"))
+c = int((a**2 + b**2)**0.5)
+print("The hypotenuse is ", c)
