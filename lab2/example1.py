@@ -1,7 +1,3 @@
-a = 2
-b = 6
-c = -20
-d = b**2 - (4 *a *c)
-x1 = (-b + (b**2 - 4*a*c)**0.5)/(2*a)
-x2 = (-b - ((b**2 - 4*a*c)**0.5))/(2*a)
-print(x1,x2)
+celcius_degree = int(input())
+fahrenheit_degree = (celcius_degree * 1.8 + 32)
+print("fahrenheit degree is ", fahrenheit_degree)
