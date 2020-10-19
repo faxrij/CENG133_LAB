@@ -1,4 +1,6 @@
-a = int(input("Enter one side :"))
-b = int(input("Enter the other side :"))
-c = int((a**2 + b**2)**0.5)
-print("The hypotenuse is ", c)
+car1 = 80
+car2 = 70
+total_distance = 490
+between_them = 150
+time = 60*(total_distance -between_them)/150
+print(time)
