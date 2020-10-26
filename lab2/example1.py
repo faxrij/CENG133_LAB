@@ -1,6 +1,9 @@
-car1 = 80
-car2 = 70
-total_distance = 490
-between_them = 150
-time = 60*(total_distance -between_them)/150
-print(time)
+age = int(input("Enter your age \n"))
+normal_price = 3
+if age>60 or age<6:
+  print("Your ticket is free")
+elif age>6 and age<18:
+  normal_price = normal_price * 50/100
+  print("Your ticket price is " , normal_price)
+else:
+  print("Your ticket price is ", normal_price)
