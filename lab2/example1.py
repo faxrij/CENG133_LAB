@@ -1,9 +1,10 @@
-age = int(input("Enter your age \n"))
-normal_price = 3
-if age>60 or age<6:
-  print("Your ticket is free")
-elif age>6 and age<18:
-  normal_price = normal_price * 50/100
-  print("Your ticket price is " , normal_price)
-else:
-  print("Your ticket price is ", normal_price)
+a = int(input("Enter the a value : "))
+b = int(input("Enter the b value : "))
+c = int(input("Enter the c value : "))
+d = (b**2 - 4*a*c)
+if d>0:
+  print("It has two real solutions")
+if d==0:
+  print("It has only one real solution")
+if d<0:
+  print("It does not have any real solutions")
