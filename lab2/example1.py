@@ -1,9 +1,5 @@
-year = int(input())
-if year%100==0:
-    if year%400==0:
-        print(year,'is a leap year')
-
-elif year %4==0:
-        print(year,'is a leap year')
-else:
-    print('not leap')
+number = 8
+table = 1
+for i in range(1,11):
+  table = number*i
+  print(table)
