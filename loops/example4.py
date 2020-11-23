@@ -10,4 +10,4 @@ while condition:
   
   elif string=='quit':
     print(sum)
-    
+    break

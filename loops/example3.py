@@ -1,10 +1,45 @@
-low = 2
-high = 20
+email = input("Please enter an email address:")
 
-for i in range(low,high+1):
-  for j in range(2,i):
-    if i%j==0:
-      print(i,'not prime')
-      break
-  else:
-    print(i,'prime')
+
+
+ref_mail = "ceng113@example.com"
+
+
+
+if "@" in email:
+
+email = email.lower()
+
+part_1 = email.split("@")[0]
+
+part_1 = part_1.replace(".", "")
+
+part_2 = email.split("@")[1]
+
+email = part_1 + "@" + part_2
+
+
+
+print(email)
+
+
+
+if email == ref_mail:
+
+
+
+print("Equal")
+
+
+
+else:
+
+
+
+print("Not equal")
+
+else:
+
+
+
+print("Not equal")
