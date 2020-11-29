@@ -1,0 +1,199 @@
+equation_1 = input('Enter the first equation:\n')
+equation_2 = input('Enter the second equation:\n')
+x_sum_fp_eq1 = 0
+x_sum_sp_eq1 = 0
+x_sum_fp_eq2 = 0
+x_sum_sp_eq2 = 0
+y_sum_fp_eq1= 0
+y_sum_sp_eq1 = 0
+
+y_sum_sp_eq2 = 0
+
+y_sum_fp_eq2 = 0
+
+num_sum_eq2 = 0
+first_part = equation_1.split("=")[0]
+second_part = equation_1.split("=")[1]
+first_part_eq2 = equation_2.split("=")[0]
+second_part_eq2 = equation_2.split("=")[1]
+x_list_fp = []
+x_list_sp = []
+y_list_fp = []
+y_list_sp = []
+#######
+x_list_fp_eq2 = []
+x_list_sp_eq2 = []
+y_list_fp_eq2 = []
+y_list_sp_eq2 = []
+number_list_sp = []
+number = ''
+
+number_list_fp_eq1 = []
+number_list_sp_eq1 = []
+number_list_fp_eq2 = []
+number_list_sp_eq2 = []
+number_sum_fp_eq1 = 0
+number_sum_sp_eq1 = 0
+number_sum_fp_eq2 = 0
+number_sum_sp_eq2 = 0
+
+## X,Y,Z FOR EQUATION 1- FIRST PART
+for i in (first_part):
+
+    if i =='x':
+        x_list_fp.append(number)
+        number = ''
+        continue
+    elif i=='y':
+        y_list_fp.append(number)
+        number = ''
+        continue
+    else:
+        if (i=='+' or i=='-') and number!='':
+            number_list_fp_eq1.append(number)
+            number = i
+            continue
+    number += i
+if number!='':
+    number_list_fp_eq1.append(number)
+### THE OTHER PART
+for i in (second_part):
+    if i =='x':
+        x_list_sp.append(number)
+        number = ''
+        continue
+    elif i=='y':
+        y_list_sp.append(number)
+        number = ''
+        continue
+    else:
+        if (i=='+' or i=='-') and number!='':
+            number_list_sp_eq1.append(number)
+            number = i
+            continue
+    number += i
+if number!='':
+    number_list_sp_eq1.append(number)
+## X,Y,Z FOR EQUATION 2- FIRST PART
+number = ''
+for i in (first_part_eq2):
+    if i =='x':
+        x_list_fp_eq2.append(number)
+        number = ''
+        continue
+    elif i=='y':
+        y_list_fp_eq2.append(number)
+        number = ''
+        continue
+    else:
+        if (i=='+' or i=='-') and number!='':
+            number_list_fp_eq2.append(number)
+            number = i
+            continue
+    number += i
+if number!='':
+    number_list_fp_eq2.append(number)
+### THE OTHER PART
+number = ''
+for i in (second_part_eq2):
+
+    if i =='x':
+        x_list_sp_eq2.append(number)
+        number = ''
+        continue
+    elif i=='y':
+        y_list_sp_eq2.append(number)
+        number = ''
+        continue
+    else:
+        if (i=='+' or i=='-') and number!='':
+            number_list_sp_eq2.append(number)
+            number =i
+            continue
+    number += i
+if number!='':
+    number_list_sp_eq2.append(number)
+
+### SUM OF X VALUES IN EQUATION1
+
+for i in x_list_fp:
+    i = int(i)
+    x_sum_fp_eq1+=i
+for i in x_list_sp:
+    i = int(i)
+    x_sum_sp_eq1+=i
+    x_sum_sp_eq1 = -1*x_sum_sp_eq1
+### SUM OF Y VALUES IN EQUATION1
+for i in y_list_fp:
+    i = int(i)
+    y_sum_fp_eq1+=i
+for i in y_list_sp:
+    i = int(i)
+    y_sum_second_part+=i
+    y_sum_second_part = -1*y_sum_second_part
+
+## SUM OF NUMBERS IN EQUATION 1
+
+for i in number_list_fp_eq1:
+    i = int(i)
+    number_sum_fp_eq1 += i
+for i in number_list_sp_eq1:
+    i = int(i)
+    number_sum_sp_eq1 += i
+    number_sum_fp_eq1 = -1 * number_sum_fp_eq1
+
+
+### SUM OF X VALUES IN EQUATION2
+
+for i in x_list_fp_eq2:
+    i = int(i)
+    x_sum_fp_eq2+=i
+for i in x_list_sp_eq2:
+    i = int(i)
+    x_sum_sp_eq2=i
+    x_sum_sp_eq2 = -1*x_sum_sp_eq2
+
+### SUM OF Y VALUES IN EQUATION2
+for i in y_list_fp_eq2:
+    i = int(i)
+    y_sum_fp_eq2+=i
+for i in y_list_sp_eq2:
+    i = int(i)
+    y_sum_sp_eq2+=i
+    y_sum_sp_eq2 = -1*y_sum_sp_eq2
+
+## SUM OF NUMBERS IN EQUATION 2
+for i in number_list_fp_eq2:
+    i = int(i)
+    number_sum_fp_eq2 += i
+for i in number_list_sp_eq2:
+    i = int(i)
+    number_sum_sp_eq2 += i
+    number_sum_fp_eq2 = -1 * number_sum_fp_eq2
+## SIMPLIFIED VERSION
+x_sum = x_sum_fp_eq1+x_sum_sp_eq1
+y_sum = y_sum_fp_eq1+y_sum_sp_eq1
+x_sum_eq2 = x_sum_fp_eq2+x_sum_sp_eq2
+y_sum_eq2 = y_sum_fp_eq2+y_sum_sp_eq2
+num_sum_eq1 = number_sum_fp_eq1+number_sum_sp_eq1
+num_sum_eq2 = number_sum_fp_eq2+number_sum_sp_eq2
+if y_sum>=0 and y_sum_eq2>=0:
+    print('Equations in the simplified form:')
+    print(str(x_sum)+'x'+'+'+str(y_sum)+'y'+'='+str(num_sum_eq1))
+    print(str(x_sum_eq2)+'x'+'+'+str(y_sum_eq2)+'y'+'='+str(num_sum_eq2))
+elif y_sum>=0 and y_sum_eq2<0:
+    print('Equations in the simplified form:')
+    print(str(x_sum)+'x'+'+'+str(y_sum)+'y'+'='+str(num_sum_eq1))
+    print(str(x_sum_eq2)+'x'+str(y_sum_eq2)+'y'+'='+str(num_sum_eq2))
+else:
+    print('Equations in the simplified form:')
+    print(str(x_sum)+'x'+str(y_sum)+'y'+'='+str(num_sum_eq1))
+    print(str(x_sum_eq2)+'x'+str(y_sum_eq2)+'y'+'='+str(num_sum_eq2))
+
+a = int((num_sum_eq1-y_sum)/(x_sum))
+b = int((num_sum_eq2-(x_sum_eq2)*a)/(y_sum_eq2))
+a = int(a)
+b = int(b)
+print('Solution:')
+print('x='+str(a))
+print('y='+str(b))
