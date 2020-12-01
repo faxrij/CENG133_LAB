@@ -190,10 +190,12 @@ else:
     print(str(x_sum)+'x'+str(y_sum)+'y'+'='+str(num_sum_eq1))
     print(str(x_sum_eq2)+'x'+str(y_sum_eq2)+'y'+'='+str(num_sum_eq2))
 
-a = int((num_sum_eq1-y_sum)/(x_sum))
-b = int((num_sum_eq2-(x_sum_eq2)*a)/(y_sum_eq2))
-a = int(a)
-b = int(b)
+first_equation = -c*a, -c*b,-c*e
+second_equation = a*c, a*d,a*f
+y_value = (-c*b)+(a*d)
+final_value = (-c*e)+(a*f)
+answer = int(final_value/y_value)
+x_value = int((f-answer*d)/c)
 print('Solution:')
-print('x='+str(a))
-print('y='+str(b))
+print('x='+str(x_value))
+print('y='+str(answer))
