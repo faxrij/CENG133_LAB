@@ -1,7 +1,8 @@
-employees = {'aydan':100,'fexri':200,'elvin':400,'xeyale':500,"mama":800}
-for i in employees.keys():
-  max_salary = 0
-  if employees[i]>=max_salary:
-    print(i)
-  max_salary = employees[i]   
-
+books = ["ULYSSES","ANIMAL FARM","BRAVE NEW WORLD","ENDER'S GAME"]
+book_dict = {}
+for i in books:
+  book_dict[i] = 'value'
+  value = len(i)
+  unique_ch = len(set(i))
+  book_dict[i] = (value,unique_ch)
+print(book_dict)
