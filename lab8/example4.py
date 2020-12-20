@@ -27,5 +27,4 @@ def dec_to_binary(num2):
         j = str(j)
         a+=j
     return a
-print(binary_to_dec('10010'))
-print(dec_to_binary(18))
+print(binary_to_dec('101111'))
